@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
+      - run: npm ci --production
       - run: npm run hoyolab-checkin -- --game=starrail
         env:
           HOYOLAB_LTOKEN: ${{ secrets.HOYOLAB_LTOKEN }}
