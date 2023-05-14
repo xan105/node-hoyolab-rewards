@@ -100,7 +100,7 @@ Use these key/pair values to create a plain object representing your session tok
   ```ts
   {
     icon: string, //icon url
-    name: string //reward name
+    name: string, //reward name
     cnt: string //reward count
   }
   ```
