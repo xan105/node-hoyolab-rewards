@@ -1,0 +1,64 @@
+{
+  "name": "@xan105/hoyolab-rewards",
+  "version": "0.1.0",
+  "description": "Library to automate Hoyolab daily login rewards",
+  "type": "module",
+  "exports": "./lib/kurukuru.js",
+  "bin": {
+    "hoyolab-checkin": "./cli/index.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "lint": "eslint \"./lib/**/*.{js,mjs}\"",
+    "hoyolab-checkin": "node \"./cli/index.js\""
+  },
+  "keywords": [
+    "hoyolab",
+    "login",
+    "daily",
+    "reward",
+    "starrail",
+    "genshin",
+    "honkai",
+    "themis"
+  ],
+  "author": {
+    "name": "Anthony Beaumont",
+    "email": "dev.xan105@outlook.be",
+    "url": "https://xan105.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xan105/node-hoyolab-rewards.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xan105/node-hoyolab-rewards/issues"
+  },
+  "homepage": "https://github.com/xan105/node-hoyolab-rewards#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/xan105"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/xan105"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/xan105"
+    }
+  ],
+  "dependencies": {
+    "@xan105/error": "^1.6.1",
+    "@xan105/is": "^2.8.2",
+    "@xan105/request": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "powertoast": "^2.1.5"
+  }
+}

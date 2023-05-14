@@ -1,0 +1,26 @@
+name: hoyolab-daily-reward
+on:
+  schedule:
+    - cron: "0 10 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm run hoyolab-checkin -- --game=starrail
+        env:
+          HOYOLAB_LTOKEN: ${{ secrets.HOYOLAB_LTOKEN }}
+          HOYOLAB_LTUID: ${{ secrets.HOYOLAB_LTUID }}
+          HOYOLAB_MHYUUID: ${{ secrets.HOYOLAB_MHYUUID }}
+          HOYOLAB_DEVICEFP: ${{ secrets.HOYOLAB_DEVICEFP }}
+          HOYOLAB_DEVICEFP_SEED_ID: ${{ secrets.HOYOLAB_DEVICEFP_SEED_ID }}
+          HOYOLAB_DEVICEFP_SEED_TIME: ${{ secrets.HOYOLAB_DEVICEFP_SEED_TIME }}
