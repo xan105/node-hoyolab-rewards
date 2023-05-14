@@ -105,7 +105,7 @@ Use these key/pair values to create a plain object representing your session tok
   }
   ```
 
-  💡 The output is affected by the lanugage code used.
+  💡 Output is affected by the lanugage code used.
 
   ❌ This promise will reject on error.
 
@@ -114,11 +114,11 @@ CLI
 
 There is a crude CLI tool provided as an implementation example in the _package.json_ `bin` field.
 
-`hoyolab-checkin --game starrail`
+`hoyolab-checkin --game=starrail`
 
 Token information can be either provided by environment variable or by arguments:
 
-`hoyolab-checkin --game starrail --ltoken=... --ltuid=... [...]`
+`hoyolab-checkin --game=starrail --ltoken=... --ltuid=... [...]`
 
 environment variables are prefixed with `HOYOLAB_` and are all uppercase.
 
@@ -126,10 +126,10 @@ environment variables are prefixed with `HOYOLAB_` and are all uppercase.
 set HOYOLAB_LTOKEN=...
 set HOYOLAB_LTUID=...
 ...
-hoyolab-checkin --game starrail
+hoyolab-checkin --game=starrail
 ```
 
 GitHub action
 =============
 
-Check out `.github/workflows/hoyolab-daily-reward.yml` found in this repo for an example of a github action running the above CLI on a daily schedule.
+Check out [.github/workflows/hoyolab-daily-reward.yml](.github/workflows/hoyolab-daily-reward.yml) found in this repo for an example of a github action running the above CLI on a daily schedule.
