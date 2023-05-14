@@ -1,6 +1,6 @@
 {
   "name": "@xan105/hoyolab-rewards",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Library to automate Hoyolab daily login rewards",
   "type": "module",
   "exports": "./lib/kurukuru.js",
