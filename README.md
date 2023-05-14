@@ -15,7 +15,7 @@ Example
 import { checkin } from "@xan105/hoyolab-rewards";
 
 console.log("Checking-in...");
-const reward = await checkin("starrail", token, { lang: "en-us" });
+const reward = await checkin("starrail", token, { lang: "en-us", loot: true });
 if (reward) console.log(`Got: ${reward.cnt} x ${reward.name}`); 
 //"Got: 20 x Stellar Jade"
 console.log("✔️ done");
@@ -105,7 +105,7 @@ Use these key/pair values to create a plain object representing your session tok
   }
   ```
 
-  💡 Output is affected by the lanugage code used.
+  💡 Output is affected by the language code used.
 
   ❌ This promise will reject on error.
 

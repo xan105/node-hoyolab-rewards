@@ -38,7 +38,6 @@ const { values : args } = parseArgs({
 });
 
 try{
-  console.log("Checking-in...");
   const token = {
     ltoken: args.ltoken || env["HOYOLAB_LTOKEN"],
     ltuid: args.ltuid || env["HOYOLAB_LTUID"],
@@ -47,8 +46,10 @@ try{
     devicefp_seed_id: args.devicefp_seed_id || env["HOYOLAB_DEVICEFP_SEED_ID"],
     devicefp_seed_time: args.devicefp_seed_time || env["HOYOLAB_DEVICEFP_SEED_TIME"]
   };
+  console.log("Checking-in...");
   const reward = await checkin(args.game, token, { loot: true });
   if (reward) console.log(`Got: ${reward.cnt} x ${reward.name}`);
+  console.log("✔️ done");
   process.exit(0);
 }catch(err){
   console.error(err);
