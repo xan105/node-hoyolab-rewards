@@ -1,5 +1,6 @@
 name: hoyolab-daily-reward
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 10 * * *"
 
